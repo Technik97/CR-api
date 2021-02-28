@@ -1,15 +1,15 @@
-const { ApolloServer, gql, makeExecutableSchema } = require('apollo-server')
+const { ApolloServer } = require('apollo-server-express')
 const { makeSqlmancerSchema, createSqlmancerClient } = require('sqlmancer')
 const express = require('express')
 require('dotenv').config()
 
-const knex = require('./database/mysql')
+const { typeDefs, resolvers } = require('./schema')
 
 const app = new express()
 const PORT = process.env.PORT || 4000
 
 const server = new ApolloServer({
-    schema: makeExecutableSchema({ typeDefs, resolvers })
+    schema: makeSqlmancerSchema({ typeDefs, resolvers })
 })
 
 server.applyMiddleware({ app })
