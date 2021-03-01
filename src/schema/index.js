@@ -58,13 +58,15 @@ const typeDefs = gql`
         slowdown: Int
         duration: Float
         radius: Float
-        hit_speed: Int!
+        hit_speed: Float
         speed: Int!
         deploy_time: Float!
         spawn_speed: Float
         life_time: Float
         range: String!
         jump_range: String
+        death_damage: Int
+        production_speed: Float
     }
 
     type Type @model(table: "card_types", pk: "id"){
