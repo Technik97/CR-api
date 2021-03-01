@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/index.js",
-    "create-migrations": "node ./database/actions/create-migrations.js"
+    "create-migrations": "node src/database/actions/create-migrations.js",
+    "run-migrations": "node src/database/actions/run-migrations.js"
   },
   "author": "",
   "license": "ISC",
