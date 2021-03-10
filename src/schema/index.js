@@ -63,7 +63,7 @@ const typeDefs = gql`
         deploy_time: Float!
         spawn_speed: Float
         life_time: Float
-        range: String!
+        atk_range: String!
         jump_range: String
         death_damage: Int
         production_speed: Float
